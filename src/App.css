@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  background: linear-gradient(135deg, #d7aefb, #a7bbfa);
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
-.App-link {
-  color: #61dafb;
+h1{
+  text-align: center;
+  color: #9c27b0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#calculator{
+  width: 100%;
+  max-width: 900px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  background: linear-gradient(135deg, #00b4db, #0083b0);
+  animation: fadeIn 0.5s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttons{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.button{
+  padding: 10px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out, transform 0.1s ease-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &:hover{
+    transform: translateY(-2px);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.number {
+  background: linear-gradient(135deg, #fff, #d7aefb);
+}
+
+.operator {
+  background: linear-gradient(135deg, #ffdb8e, #ffaa00);
+}
+
+.clear {
+  background: linear-gradient(135deg, lavender, aqua);
+}
+
+.equals{
+  background: linear-gradient(135deg, #a7bbfa, #a1a1a1);
+}
+
+#display{
+ margin-bottom: 10px;
+ padding: 10px;
+ font-size: 1.8rem;
+ border: none;
+ background-color: #554f4f;
+ color: #ffffff;
+ border-radius: 5px;
+ text-align: right;
+ overflow: hidden; 
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
   }
 }
